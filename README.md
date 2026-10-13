@@ -93,6 +93,17 @@ CI runs these checks without game files, Unity, or signing credentials. Read
 [validation scope](docs/validation.md) before interpreting test results. Changes
 use [Conventional Commits](CONTRIBUTING.md).
 
+## Tools and resources
+
+- [REA — Reverse Engineer Anything](https://github.com/morluto/rea): used in the
+  original recovery to inspect managed assembly metadata, CIL portability, and
+  declared native dependencies. The private analysis used REA 6.4.0; the recovery
+  scripts in this tooling edition do not currently invoke it.
+- [Apple Game Porting Toolkit](https://developer.apple.com/games/game-porting-toolkit/):
+  Apple's game-porting guidance, Windows game evaluation tools, and Metal shader
+  conversion resources. It is a related resource rather than a required dependency
+  of this repository's Unity IL2CPP/Metal build workflow.
+
 ## License and scope
 
 The original code and documentation here use the [MIT license](LICENSE).
