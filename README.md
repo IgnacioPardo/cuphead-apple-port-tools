@@ -1,5 +1,8 @@
 # Cuphead Apple Port Tools
 
+[![Validate tooling](https://github.com/IgnacioPardo/cuphead-apple-port-tools/actions/workflows/validate.yml/badge.svg)](https://github.com/IgnacioPardo/cuphead-apple-port-tools/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Original recovery tooling and Apple platform helpers developed while rebuilding
 a local Cuphead installation for Apple Silicon macOS and Apple TV. This repository
 contains Python tools, C# adapters, tests, and documentation. Supply your own game
@@ -12,6 +15,9 @@ edition supports local C# recovery, the known managed compilation repairs, helpe
 installation, and validation. It does **not** yet automate the complete migration
 from a purchased game to a playable Unity 6 build. See the
 [publication and migration plan](PUBLICATION_PLAN.md).
+
+Start with the [v0.1.0 experimental tooling release](https://github.com/IgnacioPardo/cuphead-apple-port-tools/releases/tag/v0.1.0)
+and [validation notes](docs/validation.md).
 
 ## What is included
 
@@ -30,6 +36,13 @@ are excluded. The repository has new history; no commits from the development
 archive were imported. There are no Git LFS objects or compiled game releases.
 
 ## Quick start
+
+Clone the repository with Git:
+
+```sh
+git clone https://github.com/IgnacioPardo/cuphead-apple-port-tools.git
+cd cuphead-apple-port-tools
+```
 
 Use Python 3.9+ and .NET SDK 8. Install ILSpy separately:
 

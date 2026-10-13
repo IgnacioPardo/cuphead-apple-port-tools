@@ -4,6 +4,11 @@ The first release is a tooling repository. The working game reconstruction
 remains in a separate private archive. Publishing a complete recovered Unity
 project is outside this release's scope.
 
+The owner authorized public publication on 2026-10-12. The initial release is
+**v0.1.0, experimental tooling**. Private review, a fresh-clone check, local
+recovery/compilation tests, Unity helper tests, and CI have passed. The final
+release commit must pass CI and the publication scan before visibility changes.
+
 ## Phase 1 — isolate the publishable material
 
 - Start a new repository with no inherited Git history or LFS objects.
@@ -50,8 +55,9 @@ a legal determination. Human provenance review remains necessary when adding fil
    release assets, signing data, or private evidence came along.
 3. Review the included-file provenance and license scope. Confirm the README
    describes the tooling's actual limits.
-4. Obtain the owner's explicit decision to change visibility. Creation of the
-   private review repository does not itself authorize a public release.
+4. With the owner's publication decision recorded, publish the reviewed tooling
+   repository and the experimental source release. Keep the game reconstruction
+   archive private.
 
 Visibility changes and game distribution are not automated by this repository.
 
