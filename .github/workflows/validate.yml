@@ -1,0 +1,30 @@
+name: Validate tooling
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Test workspace boundaries, repairs, installation, and publication checks
+        run: python3 -m unittest discover -s tests -v
+      - name: Test file-store behavior using synthetic saves
+        run: dotnet run --project tests/save-store/SaveStoreTests.csproj --configuration Release
+      - name: Audit reviewed files, staging area, and history
+        run: python3 scripts/check_publication.py

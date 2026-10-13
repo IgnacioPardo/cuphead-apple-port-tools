@@ -1,0 +1,29 @@
+# Local environments and test output only. Game outputs must be outside this repo.
+__pycache__/
+*.py[cod]
+.venv/
+**/bin/
+**/obj/
+.DS_Store
+.env
+.env.*
+!.env.example
+# Defense in depth: these remain forbidden by scripts/check_publication.py.
+/input/
+/recovered/
+/src/
+/unity-project/
+/exports/
+/builds/
+/evidence/
+/tools/
+/workspace/
+*.dll
+*.exe
+*.p12
+*.pfx
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+*.log
